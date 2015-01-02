@@ -1,6 +1,8 @@
 peakheaps
 =========
 
+![peakheapsABC.png](peakheapsABC.png)
+
 Example:
 
     $ ./peakheaps.py condA.bed condB.bed condC.bed > peakheapsABC.bed
