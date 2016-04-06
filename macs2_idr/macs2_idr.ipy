@@ -10,7 +10,7 @@ Usage:
 Options:
   -h --help                             Show this screen.
   --version                             Show version.
-  -c <input>, --control <input>         Control file. [default: test].
+  -c <input>, --control <input>         Control file. [default: EGS_HiSeq_input.bam].
   -p <prefix>, --prefix <prefix>        Output path and prefix [default: ./idr].
   -a <macsargs>, --macsargs <macsargs>  Additional arguments for MACS2 [default: --gsize ce --format BAM -q 0.70 --SPMR --nomodel --extsize 200]
   -t <idr_th>, --idrth <idr_th>         IDR threshold [default: 0.05]
