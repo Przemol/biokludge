@@ -91,14 +91,12 @@ def macs2_idr(fp_ina, fp_inb, fp_out, macs2_args, idr_th, fp_idr):
         !cat {fp_out + '_final_peaks.narrowPeak'} | sort -k8n,8n | tail -n {N} | sort -k1,1 -k2,2n -k3,3n - > {fp_out_final}
 
 if __name__ == "__main__":
-    """
+
     macs2_idr(
-        '/home/jj374/lab/raw_data/Chen2014_Cfp1/CFP1-GFP^GFP-tapM_F52B11.1A-GFP-A^NA^NA^NA_aligned^NA^NA_RC003^Fae04996.bam',
-        '/home/jj374/lab/raw_data/Chen2014_Cfp1/CFP1-GFP^GFP-tapM_F52B11.1A-GFP-B^NA^NA^NA_aligned^NA^NA_RC004^Fb704996.bam',
-        '/home/jj374/repos/biokludge/macs2_idr/CFP1_test/CFP1_idr',
-        macs2_args='--gsize ce --format BAM -q 0.70 -B --SPMR',
+        'HPL2^Q2340_mE08^E^N2^L3_aligned^NA^NA_PK011^Fc207320.bam',
+        'HPL2^Q2340_mE11^E^N2^L3_aligned^NA^NA_PK010^F8107318.bam',
+        './hpltest',
+        macs2_args=' -c EGS_HiSeq_input.bam --gsize ce --format BAM -q 0.70 --SPMR --nomodel --extsize 200',
         idr_th=0.05,
-        fp_idr='/home/jj374/opt-wheezy/idrCode/batch-consistency-analysis.r'
+        fp_idr='../scripts/batch-consistency-analysis.r'
     )
-    """
-    pass
