@@ -117,7 +117,7 @@ if __name__ == "__main__":
     macs2_idr(
         arguments["<treatment1>"],
         arguments["<treatment2>"],
-        arguments["'--prefix'"],
+        arguments["--prefix"],
         macs2_args = "-c " + arguments["--control"] + " " + arguments["--macsargs"],
         idr_th = arguments["--idrth"],
         fp_idr = arguments["--fpidr"]
