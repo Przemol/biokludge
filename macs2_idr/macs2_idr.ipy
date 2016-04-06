@@ -1,5 +1,22 @@
 #!/usr/bin/env ipython
+
+"""macs2_idr
+
+Usage:
+  macs2_idr <treatment1> <treatment2> [-c <input>]
+  macs2_idr  (-h | --help)
+  macs2_idr --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+  -c <input>, --control <input>   Control file. [default: test].
+
+
+"""
+
 import os
+from docopt import docopt
 
 def macs2(fp_inp, fp_out, macs2_args=''):
     if os.path.isfile(fp_out + '_peaks.narrowPeak'):
@@ -91,7 +108,7 @@ def macs2_idr(fp_ina, fp_inb, fp_out, macs2_args, idr_th, fp_idr):
         !cat {fp_out + '_final_peaks.narrowPeak'} | sort -k8n,8n | tail -n {N} | sort -k1,1 -k2,2n -k3,3n - > {fp_out_final}
 
 if __name__ == "__main__":
-
+    arguments = docopt(__doc__, version='macs2_idr 0.1')
     macs2_idr(
         'HPL2^Q2340_mE08^E^N2^L3_aligned^NA^NA_PK011^Fc207320.bam',
         'HPL2^Q2340_mE11^E^N2^L3_aligned^NA^NA_PK010^F8107318.bam',
