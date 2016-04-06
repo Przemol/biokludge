@@ -111,6 +111,8 @@ def macs2_idr(fp_ina, fp_inb, fp_out, macs2_args, idr_th, fp_idr):
 
 if __name__ == "__main__":
     arguments = docopt(__doc__, version='macs2_idr 0.1')
+    print(arguments)
+    sys.exit("test")
     macs2_idr(
         'HPL2^Q2340_mE08^E^N2^L3_aligned^NA^NA_PK011^Fc207320.bam',
         'HPL2^Q2340_mE11^E^N2^L3_aligned^NA^NA_PK010^F8107318.bam',
