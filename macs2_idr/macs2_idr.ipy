@@ -3,7 +3,7 @@
 """macs2_idr
 
 Usage:
-  macs2_idr <treatment1> <treatment2> [-c <input>]
+  macs2_idr <treatment1> <treatment2> [-c <input>] [-c <prefix>]
   macs2_idr  (-h | --help)
   macs2_idr --version
 
@@ -11,6 +11,8 @@ Options:
   -h --help     Show this screen.
   --version     Show version.
   -c <input>, --control <input>   Control file. [default: test].
+  -p <prefix>, --prefix <prefix>    Prefix [default: idr].
+  -a <macsargs>, --macsargs <macsargs>     Additional arguments for MACS2 [default: --gsize ce --format BAM -q 0.70 --SPMR --nomodel --extsize 200]
 
 
 """
@@ -113,7 +115,7 @@ if __name__ == "__main__":
         'HPL2^Q2340_mE08^E^N2^L3_aligned^NA^NA_PK011^Fc207320.bam',
         'HPL2^Q2340_mE11^E^N2^L3_aligned^NA^NA_PK010^F8107318.bam',
         './hpltest',
-        macs2_args=' -c EGS_HiSeq_input.bam --gsize ce --format BAM -q 0.70 --SPMR --nomodel --extsize 200',
+        macs2_args='-c EGS_HiSeq_input.bam --gsize ce --format BAM -q 0.70 --SPMR --nomodel --extsize 200',
         idr_th=0.05,
         fp_idr='../scripts/batch-consistency-analysis.r'
     )
