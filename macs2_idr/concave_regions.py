@@ -39,7 +39,7 @@ def call_peaks_on_chrom(l_iv):
         signal[start:end] = val
 
     # Convolve signal (kernel is multiplied by an adhoc large number for numerical stability)
-    width = 100
+    width = 250
     kernel = 1E6 * np.convolve(np.convolve(np.convolve(D2_kernel(),
                                                        rolling_mean_kernel(width)),
                                                        rolling_mean_kernel(width)),
